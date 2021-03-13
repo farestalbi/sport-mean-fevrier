@@ -1,0 +1,42 @@
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12" >
+        <table class="table table-bordered table-dark">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Score 1</th>
+              <th scope="col">Score 2</th>
+              <th scope="col">Team 1</th>
+              <th scope="col">Team 2</th>
+              <th scope="col">Logo 1</th>
+              <th scope="col">Logo 2</th>
+              <th scope="col">Actions</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor='let t of matches'>
+              <td>{{t.id}}</td>
+              <td>{{t.score1}}</td>
+              <td>{{t.score2}}</td>
+              <td>{{t.team1}}</td>
+              <td>{{t.team2}}</td>
+              <td><img src={{t.logo1}}></td>
+              <td><img src={{t.logo1}}></td>
+              <td><button type="button" class="btn btn-success" (click)='goToMatch(t.id)' >Display</button>&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-primary">Edit</button>&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-danger">Delete</button>
+
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
